@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="短信转发设置"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="服务器地址:"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/serverUrlEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如: https://example.com/api/sms"
+        android:inputType="textUri"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关键词过滤(多个关键词用逗号分隔):"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/keywordsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="例如: 验证码,密码,登录"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存设置"
+        android:layout_marginTop="16dp"/>
+
+    <Switch
+        android:id="@+id/serviceSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启用短信监听服务"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="服务状态: 未启动"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/logTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日志记录:\n"
+            android:textSize="14sp"/>
+    </ScrollView>
+
+</LinearLayout>
